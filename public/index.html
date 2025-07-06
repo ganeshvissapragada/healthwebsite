@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Meddical – Leading the Way in Medical Excellence</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-pb0R1KA1UqYV7QJoVqfS1d9eBG+zd2TSqG4KwkrgIeqtS7pv3qj3Ew3DKGmP1cg48GdrOxrP6z4G6h/zKPKaKg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    .modal {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: white;
+      padding: 2rem;
+      border-radius: .5rem;
+      box-shadow: 0 0 20px rgba(0,0,0,.2);
+      display: none;
+      z-index: 9999;
+      text-align: center;
+    }
+    .modal.show {
+      display: block;
+    }
+    .modal h2 {
+      margin-bottom: 1rem;
+      color: #2ca8ff;
+    }
+    .modal button {
+      background: #2ca8ff;
+      color: white;
+      padding: .5rem 1rem;
+      border: none;
+      border-radius: .3rem;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Your full website content goes here (unchanged sections: navbar, hero, welcome, etc.) -->
+<!-- Top Info Bar -->
+  <div class="top-bar">
+    <div class="container">
+      <ul class="info-list">
+        <li><i class="fas fa-phone-alt"></i> Emergency: (237) 681‑212‑255</li>
+        <li><i class="fas fa-clock"></i> Work Hour: 08:00–20:00 Everyday</li>
+        <li><i class="fas fa-map-marker-alt"></i> Location: 0123 Some Place</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container">
+      <div class="logo"><a href="#">MEDDICAL<span class="dot">.</span></a></div>
+      <nav class="main-nav">
+        <a href="#">Home</a>
+        <a href="#">About us</a>
+        <a href="#">Services</a>
+        <a href="#">Doctors</a>
+        <a href="#">News</a>
+        <a href="#">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <i class="fas fa-search"></i>
+        <a href="#" class="btn btn-outline">Appointment</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero-content">
+      <div class="hero-text">
+        <span class="subtle">CARING FOR LIFE</span>
+        <h1>Leading the Way in Medical Excellence</h1>
+        <a href="#" class="btn btn-primary">Our Services</a>
+      </div>
+      <div class="hero-image">
+        <!-- Add your hero image here -->
+      </div>
+    </div>
+    <div class="hero-cards container">
+      <div class="card">
+        <i class="fas fa-calendar-alt"></i>
+        <h4>Book an Appointment</h4>
+      </div>
+      <div class="card">
+        <i class="fas fa-user-md"></i>
+        <h4>Our Doctors</h4>
+      </div>
+      <div class="card">
+        <i class="fas fa-stethoscope"></i>
+        <h4>Health Checkups</h4>
+      </div>
+    </div>
+  </section>
+
+  <!-- Welcome -->
+  <section class="welcome container">
+    <h2>Welcome to Meddical</h2>
+    <h3>A Great Place to Receive Care</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque placerat scelerisque tortor ornare ornare. Convallis felis vitae tortor aliquet. Velit nascetur proin massa in. Consequat faucibus porttitor enim et.</p>
+    <a href="#" class="link-more">Learn More →</a>
+    <div class="welcome-img">
+      <!-- Add your welcome image here -->
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="services container">
+    <h2>Care You Can Believe In</h2>
+    <h3>Our Services</h3>
+    <div class="services-grid">
+      <div class="services-nav">
+        <button class="active"><i class="fas fa-check-circle"></i> Free Checkup</button>
+        <button><i class="fas fa-heartbeat"></i> Cardiology</button>
+        <button><i class="fas fa-vial"></i> Lab Testing</button>
+        <button><i class="fas fa-tint"></i> Blood Bank</button>
+        <button class="view-all">View All</button>
+      </div>
+      <div class="services-content">
+        <h4>A passion for putting patients first.</h4>
+        <ul class="service-list">
+          <li><i class="fas fa-check"></i> A Passion for Healing</li>
+          <li><i class="fas fa-check"></i> All our best</li>
+          <li><i class="fas fa-check"></i> A Legacy of Excellence</li>
+          <li><i class="fas fa-check"></i> 5-Star Care</li>
+          <li><i class="fas fa-check"></i> Believe In Us</li>
+          <li><i class="fas fa-check"></i> Always Caring</li>
+        </ul>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque placerat scelerisque tortor ornare ornare. Convallis felis vitae tortor aliquet. Velit nascetur proin massa in.</p>
+        <div class="services-small-img">
+          <!-- Add your small service image here -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Specialties -->
+  <section class="specialties">
+    <div class="container">
+      <h2>Always Caring</h2>
+      <h3>Our Specialties</h3>
+      <div class="specialty-grid">
+        <div><i class="fas fa-heartbeat"></i><span>Neurology</span></div>
+        <div class="highlight"><i class="fas fa-heartbeat"></i><span>Brain</span></div>
+        <div><i class="fas fa-heartbeat"></i><span>Oncology</span></div>
+        <div><i class="fas fa-heartbeat"></i><span>Otolaryngology</span></div>
+        <div><i class="fas fa-heartbeat"></i><span>Ophthalmology</span></div>
+        <div><i class="fas fa-heartbeat"></i><span>Cardiovascular</span></div>
+        <div><i class="fas fa-heartbeat"></i><span>Pulmonology</span></div>
+        <div><i class="fas fa-heartbeat"></i><span>Renal Medicine</span></div>
+        <div><i class="fas fa-heartbeat"></i><span>Gastroenterology</span></div>
+        <div><i class="fas fa-heartbeat"></i><span>Urology</span></div>
+        <div><i class="fas fa-heartbeat"></i><span>Dermatology</span></div>
+        <div><i class="fas fa-heartbeat"></i><span>Gynecology</span></div>
+      </div>
+    </div>
+  </section>
+   <!-- Our Doctors -->
+  <section class="doctors container">
+    <h2>Trusted Care</h2>
+    <h3>Our Doctors</h3>
+    <div class="cards-row">
+      <div class="card-doc">
+        <h4>Doctor's Name</h4>
+        <p>Neurology</p>
+        <div class="socials">
+          <i class="fab fa-facebook-f"></i>
+          <i class="fab fa-twitter"></i>
+          <i class="fab fa-instagram"></i>
+        </div>
+        <a href="#" class="btn btn-outline">View Profile</a>
+      </div>
+      <div class="card-doc">
+        <h4>Doctor's Name</h4>
+        <p>Neurology</p>
+        <div class="socials">
+          <i class="fab fa-facebook-f"></i>
+          <i class="fab fa-twitter"></i>
+          <i class="fab fa-instagram"></i>
+        </div>
+        <a href="#" class="btn btn-outline">View Profile</a>
+      </div>
+      <div class="card-doc">
+        <h4>Doctor's Name</h4>
+        <p>Neurology</p>
+        <div class="socials">
+          <i class="fab fa-facebook-f"></i>
+          <i class="fab fa-twitter"></i>
+          <i class="fab fa-instagram"></i>
+        </div>
+        <a href="#" class="btn btn-outline">View Profile</a>
+      </div>
+    </div>
+    <div class="slider-dots"><span class="active"></span><span></span><span></span></div>
+  </section>
+
+  <!-- News -->
+  <section class="news container">
+    <h2>Better Information, Better Health</h2>
+    <h3>News</h3>
+    <div class="cards-row">
+      <div class="card-news">
+        <div class="news-info">
+          <small>Monday 05, September 2021 | By Author</small>
+          <h4>This Article’s Title goes Here, but not too long.</h4>
+          <div class="meta"><i class="fas fa-eye"></i> 56 <i class="fas fa-comments"></i> 08</div>
+        </div>
+      </div>
+      <div class="card-news">
+        <div class="news-info">
+          <small>Monday 05, September 2021 | By Author</small>
+          <h4>This Article’s Title goes Here, but not too long.</h4>
+          <div class="meta"><i class="fas fa-eye"></i> 56 <i class="fas fa-comments"></i> 08</div>
+        </div>
+      </div>
+      <div class="card-news">
+        <div class="news-info">
+          <small>Monday 05, September 2021 | By Author</small>
+          <h4>This Article’s Title goes Here, but not too long.</h4>
+          <div class="meta"><i class="fas fa-eye"></i> 56 <i class="fas fa-comments"></i> 08</div>
+        </div>
+      </div>
+    </div>
+    <div class="slider-dots"><span class="active"></span><span></span><span></span></div>
+  </section>
+  <!-- Appointment Form Section -->
+  <section class="appointment">
+    <div class="container appoint-grid">
+      <div class="appoint-info">
+        <h2>Book an Appointment</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque placerat scelerisque tortor ornare ornare.</p>
+      </div>
+      <form class="appoint-form">
+        <div class="form-row">
+          <input type="text" name="name" id="name" placeholder="Name" required />
+          <select name="gender" id="gender" required>
+            <option value="" disabled selected>Gender</option>
+            <option>Male</option>
+            <option>Female</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <input type="email" name="email" id="email" placeholder="Email" required />
+          <input type="tel" name="phone" id="phone" placeholder="Phone" required />
+        </div>
+        <div class="form-row">
+          <input type="date" name="date" id="date" required />
+          <input type="time" name="time" id="time" required />
+        </div>
+        <div class="form-row">
+          <input type="text" name="doctor" id="doctor" placeholder="Doctor (optional)" />
+          <select name="department" id="department">
+            <option value="" disabled selected>Department</option>
+            <option>Neurology</option>
+            <option>Cardiology</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <textarea name="problem" placeholder="Problems / Concerns (e.g., Cardiology, Neurology)" required></textarea>
+        </div>
+        <div class="form-row">
+          <textarea name="message" placeholder="Additional Message"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+  </section>
+ <section class="contact container">
+    <h2>Get In Touch</h2>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <i class="fas fa-phone-alt"></i>
+        <h4>Emergency</h4>
+        <p>(237) 681‑212‑255</p>
+      </div>
+      <div class="contact-card">
+        <i class="fas fa-map-marker-alt"></i>
+        <h4>Location</h4>
+        <p>0123 Some Place<br>5678 Some Country</p>
+      </div>
+      <div class="contact-card">
+        <i class="fas fa-envelope"></i>
+        <h4>Email</h4>
+        <p>fildneseeeg@gmail.com<br>mypbadsdb@gmail.com</p>
+      </div>
+      <div class="contact-card">
+        <i class="fas fa-clock"></i>
+        <h4>Working Hours</h4>
+        <p>Mon–Sat: 08:00–20:00<br>Sunday: Emergency only</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-top">
+      <div class="footer-col">
+        <h3><a href="#">MEDDICAL<span class="dot">.</span></a></h3>
+        <p>Leading the Way in Medical<br> Excellence, Trusted Care.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Important Links</h4>
+        <ul>
+          <li><a href="#">Appointments</a></li>
+          <li><a href="#">Doctors</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">About Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact Us</h4>
+        <ul>
+          <li><i class="fas fa-phone-alt"></i> (237) 681‑212‑255</li>
+          <li><i class="fas fa-envelope"></i> fildneseeeg@gmail.com</li>
+          <li><i class="fas fa-map-marker-alt"></i> 0123 Some Place, Some Country</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Newsletter</h4>
+        <form>
+          <input type="email" placeholder="Enter your email address" />
+          <button type="submit"><i class="fas fa-paper-plane"></i></button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2021 Hospital’s name All Rights Reserved by PNTLC–LTD</p>
+      <div class="socials">
+        <i class="fab fa-facebook-f"></i>
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-instagram"></i>
+      </div>
+    </div>
+  </footer>
+  <!-- Modal for success -->
+  <div id="successModal" class="modal">
+    <h2>Appointment Booked Successfully!</h2>
+    <p>We will reach out to you shortly.</p>
+    <button onclick="document.getElementById('successModal').classList.remove('show')">Close</button>
+  </div>
+
+  <!-- JS to handle appointment form submission -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const appointForm = document.querySelector(".appoint-form");
+
+      appointForm.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        const formData = new FormData(appointForm);
+        const data = {
+          name: formData.get("name"),
+          gender: formData.get("gender"),
+          email: formData.get("email"),
+          phone: formData.get("phone"),
+          date: formData.get("date"),
+          time: formData.get("time"),
+          doctor: formData.get("doctor"),
+          department: formData.get("department"),
+          problem: formData.get("problem"),
+          message: formData.get("message"),
+        };
+
+        try {
+          const res = await fetch("http://localhost:3002/api/appointments", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(data)
+          });
+
+          if (res.ok) {
+            appointForm.reset();
+            document.getElementById("successModal").classList.add("show");
+          } else {
+            alert("Error booking appointment.");
+          }
+        } catch (err) {
+          console.error(err);
+          alert("Server error.");
+        }
+      });
+
+      // Smooth scroll to appointment section
+      document.querySelector(".nav-actions a.btn").addEventListener("click", (e) => {
+        e.preventDefault();
+        document.querySelector(".appointment").scrollIntoView({ behavior: "smooth" });
+      });
+    });
+  </script>
+
+</body>
+</html>

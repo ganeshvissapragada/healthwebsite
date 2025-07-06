@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Meddical – Login</title>
+
+  <!-- Google Fonts & Font Awesome -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-pb0R1KA1UqYV7QJoVqfS1d9eBG+zd2TSqG4KwkrgIeqtS7pv3qj3Ew3DKGmP1cg48GdrOxrP6z4G6h/zKPKaKg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    body { background: var(--lightblue); }
+    .login-page {
+      display: flex;
+      min-height: 100vh;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 0;
+    }
+    .login-card {
+      background: #fff;
+      width: 100%;
+      max-width: 400px;
+      padding: 2rem;
+      border-radius: .5rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,.1);
+      text-align: center;
+    }
+    .login-card h2 {
+      color: var(--dark);
+      margin-bottom: 1.5rem;
+      font-weight: 600;
+    }
+    .login-card .form-row {
+      margin-bottom: 1rem;
+      text-align: left;
+    }
+    .login-card input,
+    .login-card textarea {
+      width: 100%;
+      padding: .8rem 1rem;
+      border: 1px solid #ccc;
+      border-radius: .3rem;
+      font-size: 1rem;
+      resize: vertical;
+    }
+    .login-card textarea {
+      height: 100px;
+    }
+    .login-card .btn-primary {
+      width: 100%;
+      margin-top: 1rem;
+      padding: .8rem;
+      font-size: 1rem;
+    }
+    .login-card .options {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: .9rem;
+      margin: .5rem 0 1rem;
+    }
+    .login-card .options label {
+      display: flex;
+      align-items: center;
+      gap: .3rem;
+      cursor: pointer;
+    }
+    .login-card .social-login {
+      margin-top: 1rem;
+    }
+    .login-card .social-login i {
+      font-size: 1.4rem;
+      margin: 0 .5rem;
+      color: var(--gray);
+      cursor: pointer;
+      transition: transform .2s;
+    }
+    .login-card .social-login i:hover {
+      transform: scale(1.2);
+      color: var(--dark);
+    }
+    .login-links {
+      margin-top: 1.2rem;
+      font-size: .9rem;
+    }
+    .login-links a {
+      color: var(--blue);
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Info Bar -->
+  <div class="top-bar">
+    <div class="container">
+      <ul class="info-list">
+        <li><i class="fas fa-phone-alt"></i> Emergency: (237) 681‑212‑255</li>
+        <li><i class="fas fa-clock"></i> Work Hour: 08:00–20:00 Everyday</li>
+        <li><i class="fas fa-map-marker-alt"></i> Location: 0123 Some Place</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container">
+      <div class="logo"><a href="#">MEDDICAL<span class="dot">.</span></a></div>
+      <nav class="main-nav">
+        <a href="#">Home</a>
+        <a href="#">About us</a>
+        <a href="#">Services</a>
+        <a href="#">Doctors</a>
+        <a href="#">News</a>
+        <a href="#">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <i class="fas fa-search"></i>
+        <a href="#" class="btn btn-outline">Appointment</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Login Section -->
+  <section class="login-page">
+    <div class="login-card">
+      <h2>Welcome Back</h2>
+      <form id="loginForm">
+        <div class="form-row">
+          <input type="email" name="email" placeholder="Email Address" required />
+        </div>
+        <div class="form-row">
+          <input type="password" name="password" placeholder="Password" required />
+        </div>
+        <div class="form-row">
+          <textarea name="concern" placeholder="Problems / Concerns (if any)"></textarea>
+        </div>
+        <div class="options">
+          <label>
+            <input type="checkbox" /> Remember me
+          </label>
+          <a href="#">Forgot Password?</a>
+        </div>
+        <button type="submit" class="btn btn-primary">Log In</button>
+      </form>
+      <div class="login-links">
+        <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-top">
+      <div class="footer-col">
+        <h3><a href="#">MEDDICAL<span class="dot">.</span></a></h3>
+        <p>Leading the Way in Medical<br> Excellence, Trusted Care.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Important Links</h4>
+        <ul>
+          <li><a href="#">Appointments</a></li>
+          <li><a href="#">Doctors</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">About Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact Us</h4>
+        <ul>
+          <li><i class="fas fa-phone-alt"></i> (237) 681‑212‑255</li>
+          <li><i class="fas fa-envelope"></i> fildneseeeg@gmail.com</li>
+          <li><i class="fas fa-map-marker-alt"></i> 0123 Some Place, Some Country</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Newsletter</h4>
+        <form>
+          <input type="email" placeholder="Enter your email address" />
+          <button type="submit"><i class="fas fa-paper-plane"></i></button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2021 Hospital’s name All Rights Reserved by PNTLC–LTD</p>
+      <div class="socials">
+        <i class="fab fa-facebook-f"></i>
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-instagram"></i>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 🔌 JS: Connect to backend -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const form = document.getElementById("loginForm");
+
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        const email = form.email.value.trim();
+        const password = form.password.value.trim();
+
+        try {
+          const response = await fetch("http://localhost:3002/api/login", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ email, password })
+          });
+
+          const data = await response.json();
+
+          if (response.ok) {
+            alert("Login successful!");
+            // Save token or redirect if needed
+            window.location.href = "index.html"; // customize as needed
+          } else {
+            alert(data.message || "Invalid login credentials");
+          }
+        } catch (error) {
+          console.error("Error logging in:", error);
+          alert("Server error. Try again later.");
+        }
+      });
+    });
+  </script>
+</body>
+</html>

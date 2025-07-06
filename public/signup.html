@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Meddical – Sign Up</title>
+
+  <!-- Google Fonts & Font Awesome -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .auth {
+      background: var(--lightblue);
+      padding: 4rem 0;
+    }
+    .auth-container {
+      background: #fff;
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 2rem;
+      border-radius: .5rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,.1);
+      text-align: center;
+    }
+    .auth-container h2 {
+      color: var(--dark);
+      margin-bottom: 1.5rem;
+      font-weight: 600;
+    }
+    .auth-form .form-row {
+      margin-bottom: 1rem;
+      text-align: left;
+    }
+    .auth-form input,
+    .auth-form select,
+    .auth-form textarea {
+      width: 100%;
+      padding: .8rem 1rem;
+      border: 1px solid #ccc;
+      border-radius: .3rem;
+      resize: vertical;
+    }
+    .auth-form textarea {
+      height: 100px;
+    }
+    .auth-form .btn-primary {
+      width: 100%;
+      margin-top: .5rem;
+    }
+    .auth-links {
+      margin-top: 1rem;
+      font-size: .9rem;
+    }
+    .auth-links a {
+      color: var(--blue);
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Info Bar -->
+  <div class="top-bar">
+    <div class="container">
+      <ul class="info-list">
+        <li><i class="fas fa-phone-alt"></i> Emergency: (237) 681‑212‑255</li>
+        <li><i class="fas fa-clock"></i> Work Hour: 08:00–20:00 Everyday</li>
+        <li><i class="fas fa-map-marker-alt"></i> Location: 0123 Some Place</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container">
+      <div class="logo"><a href="#">MEDDICAL<span class="dot">.</span></a></div>
+      <nav class="main-nav">
+        <a href="#">Home</a>
+        <a href="#">About us</a>
+        <a href="#">Services</a>
+        <a href="#">Doctors</a>
+        <a href="#">News</a>
+        <a href="#">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <i class="fas fa-search"></i>
+        <a href="#" class="btn btn-outline">Appointment</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Sign Up Form -->
+  <section class="auth">
+    <div class="container auth-container">
+      <h2>Create Your Account</h2>
+      <form class="auth-form" id="signupForm">
+        <div class="form-row">
+          <input type="text" name="fullName" placeholder="Full Name" required />
+        </div>
+        <div class="form-row">
+          <input type="email" name="email" placeholder="Email Address" required />
+        </div>
+        <div class="form-row">
+          <input type="tel" name="phone" placeholder="Phone Number" required />
+        </div>
+        <div class="form-row">
+          <input type="password" name="password" placeholder="Password" required />
+        </div>
+        <div class="form-row">
+          <input type="password" name="confirmPassword" placeholder="Confirm Password" required />
+        </div>
+        <div class="form-row">
+          <select name="gender" required>
+            <option value="" disabled selected>Gender</option>
+            <option>Male</option>
+            <option>Female</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <textarea name="concern" placeholder="Problems / Concerns (e.g., Cardiology, Neurology, etc.)" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Sign Up</button>
+      </form>
+      <div class="auth-links">
+        <p>Already have an account? <a href="login.html">Log In</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-top">
+      <div class="footer-col">
+        <h3><a href="#">MEDDICAL<span class="dot">.</span></a></h3>
+        <p>Leading the Way in Medical<br> Excellence, Trusted Care.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Important Links</h4>
+        <ul>
+          <li><a href="#">Appointments</a></li>
+          <li><a href="#">Doctors</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">About Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact Us</h4>
+        <ul>
+          <li><i class="fas fa-phone-alt"></i> (237) 681‑212‑255</li>
+          <li><i class="fas fa-envelope"></i> fildneseeeg@gmail.com</li>
+          <li><i class="fas fa-map-marker-alt"></i> 0123 Some Place, Some Country</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Newsletter</h4>
+        <form>
+          <input type="email" placeholder="Enter your email address" />
+          <button type="submit"><i class="fas fa-paper-plane"></i></button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2021 Hospital’s name All Rights Reserved by PNTLC–LTD</p>
+      <div class="socials">
+        <i class="fab fa-facebook-f"></i>
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-instagram"></i>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Signup Logic -->
+  <script>
+    document.getElementById("signupForm").addEventListener("submit", async function (e) {
+      e.preventDefault();
+
+      const form = e.target;
+
+      const fullName = form.fullName.value;
+      const email = form.email.value;
+      const phone = form.phone.value;
+      const password = form.password.value;
+      const confirmPassword = form.confirmPassword.value;
+      const gender = form.gender.value;
+      const concern = form.concern.value;
+
+      if (password !== confirmPassword) {
+        alert("Passwords do not match!");
+        return;
+      }
+
+      try {
+        const response = await fetch("http://localhost:3002/api/signup", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            fullName,
+            email,
+            phone,
+            password,
+            gender,
+            concern
+          }),
+        });
+
+        const data = await response.json();
+        if (response.ok) {
+          alert("Signup successful! Redirecting to login page...");
+          window.location.href = "login.html";
+        } else {
+          alert(data.message || "Signup failed");
+        }
+      } catch (err) {
+        console.error(err);
+        alert("Server error, please try again later.");
+      }
+    });
+  </script>
+</body>
+</html>
